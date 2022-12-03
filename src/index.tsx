@@ -5,7 +5,7 @@ import { store } from "app/store";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { theme } from "Theme";
 import App from "App";
-
+import "./index.scss";
 const container = document.getElementById("root")!;
 const root = createRoot(container);
 

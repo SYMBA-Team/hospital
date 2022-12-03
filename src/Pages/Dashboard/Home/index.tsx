@@ -148,7 +148,6 @@ function Tasks() {
                     .fill(null)
                     .map((elm, i) => {
                         const day = addDays(startOfweek.getTime(), i);
-                        console.log({ i, startOfToday, day });
                         return <DateDay date={day} selected={startOfToday.getTime() === day.getTime()} />;
                     })}
             </Box>

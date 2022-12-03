@@ -1,0 +1,36 @@
+/*-------------------------- scrollbar --------------------------*/
+:root {
+    --scrollBG: #b0b0b0;
+    --scrollThumb: black;
+}
+.hideThumbs {
+    --scrollBG: transparent;
+    --scrollThumb: transparent;
+    transition: all 0.5s ease;
+}
+.hideThumbs:hover {
+    --scrollBG: #b0b0b0;
+    --scrollThumb: black;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--scrollBG);
+    border-radius: 2em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--scrollThumb);
+    border-radius: 2em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background: rgb(42, 42, 42);
+}

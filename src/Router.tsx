@@ -7,6 +7,9 @@ import { Navigate, useRoutes } from "react-router-dom";
 import Home from "Pages/Dashboard/Home";
 import Work from "Pages/Dashboard/Work";
 import Patients from "Pages/Dashboard/Patients";
+import PatientsList from "Pages/Dashboard/Patients/PatientsList";
+import NewPatients from "Pages/Dashboard/Patients/NewPatients";
+import Patient from "Pages/Dashboard/Patients/Patient";
 
 const Router = () => {
     const { user } = useUser();
@@ -30,6 +33,20 @@ const Router = () => {
                 {
                     path: "patients",
                     element: <Patients />,
+                    children: [
+                        {
+                            index: true,
+                            element: <PatientsList />,
+                        },
+                        {
+                            path: "new",
+                            element: <NewPatients />,
+                        },
+                        {
+                            path: ":id",
+                            element: <Patient />,
+                        },
+                    ],
                 },
                 {
                     path: "*",
